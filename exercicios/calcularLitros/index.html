@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Litros Gastos</title>
+    <style>
+        body {
+            background-color: cadetblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 style="background-color: blueviolet; text-align: center;">Calcular litros gastos</h1>
+    <input type="number" name="tempo de viagem (horas)" id="tempo">
+    <input type="number" name="velocidade media (km/h)" id="velmedia">
+    <button style="background-color: blueviolet;" onclick="calcular()">Calcular</button>
+    <h2>Litros gastos: </h2>
+
+
+    <script>
+        function calcular() {
+            let media = Number(document.getElementById('velmedia').value);
+            let temp = Number(document.getElementById('tempo').value);
+
+            let resultado = (media * temp) / 12;
+
+            document.getElementsByTagName('h2')[0].innerText = "Litros gastos: " + resultado.toFixed(3);
+
+
+        }
+
+    </script>
+</body>
+</html>
